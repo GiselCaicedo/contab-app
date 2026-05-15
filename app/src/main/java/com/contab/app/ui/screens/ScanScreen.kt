@@ -76,57 +76,57 @@ private fun ScanCameraScreen(onCancel: () -> Unit, onScanned: () -> Unit) {
                     Icon(Icons.Filled.ArrowBack, null, tint = Color.White, modifier = Modifier.size(18.dp))
                 }
                 Spacer(Modifier.width(12.dp))
-                Text("Escanear recibo", color = Color.White, fontSize = 15.sp, fontWeight = FontWeight.SemiBold)
+                Text("Escanear recibo", color = Color.White, fontSize = 15.sp, fontWeight = FontWeight.SemiBold, fontFamily = Poppins)
             }
 
-            Box(modifier = Modifier.weight(1f), contentAlignment = Alignment.Center) {
-                // Viewfinder placeholder
+            Box(modifier = Modifier.fillMaxWidth().weight(1f)) {
+                // Viewfinder centered
                 Box(
-                    modifier = Modifier
-                        .size(150.dp, 200.dp)
-                        .border(1.dp, Color.White.copy(alpha = 0.15f), RoundedCornerShape(8.dp)),
+                    modifier = Modifier.align(Alignment.Center).size(220.dp, 280.dp),
                     contentAlignment = Alignment.Center
                 ) {
+                    // Hint inside the frame
                     Column(horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                        Icon(Icons.Filled.CameraAlt, null, tint = Color.White.copy(alpha = 0.3f), modifier = Modifier.size(32.dp))
-                        Text("Coloca el recibo\ndentro del marco", color = Color.White.copy(alpha = 0.4f),
-                            fontSize = 11.sp, textAlign = TextAlign.Center, lineHeight = 16.sp)
+                        Icon(Icons.Filled.CameraAlt, null, tint = Color.White.copy(alpha = 0.35f), modifier = Modifier.size(36.dp))
+                        Text("Coloca el recibo\ndentro del marco", color = Color.White.copy(alpha = 0.5f),
+                            fontSize = 12.sp, textAlign = TextAlign.Center, lineHeight = 16.sp, fontFamily = Poppins)
                     }
-                }
 
-                // Corner markers (L-shaped using nested borders)
-                Box(modifier = Modifier.size(150.dp, 200.dp)) {
-                    // Top-left
-                    Box(modifier = Modifier.size(28.dp).align(Alignment.TopStart)
-                        .border(androidx.compose.foundation.BorderStroke(2.dp, Blue500))
-                        .padding(end = 26.dp, bottom = 26.dp).background(Color.Transparent))
-                    // Top-right
-                    Box(modifier = Modifier.size(28.dp).align(Alignment.TopEnd)
-                        .border(androidx.compose.foundation.BorderStroke(2.dp, Blue500))
-                        .padding(start = 26.dp, bottom = 26.dp).background(Color.Transparent))
-                    // Bottom-left
-                    Box(modifier = Modifier.size(28.dp).align(Alignment.BottomStart)
-                        .border(androidx.compose.foundation.BorderStroke(2.dp, Blue500))
-                        .padding(end = 26.dp, top = 26.dp).background(Color.Transparent))
-                    // Bottom-right
-                    Box(modifier = Modifier.size(28.dp).align(Alignment.BottomEnd)
-                        .border(androidx.compose.foundation.BorderStroke(2.dp, Blue500))
-                        .padding(start = 26.dp, top = 26.dp).background(Color.Transparent))
-                }
+                    // L-shaped corner markers drawn with Canvas
+                    androidx.compose.foundation.Canvas(modifier = Modifier.matchParentSize()) {
+                        val stroke = 3.dp.toPx()
+                        val len = 28.dp.toPx()
+                        val w = size.width
+                        val h = size.height
+                        val color = Blue500
+                        // Top-left
+                        drawLine(color, androidx.compose.ui.geometry.Offset(0f, 0f), androidx.compose.ui.geometry.Offset(len, 0f), stroke)
+                        drawLine(color, androidx.compose.ui.geometry.Offset(0f, 0f), androidx.compose.ui.geometry.Offset(0f, len), stroke)
+                        // Top-right
+                        drawLine(color, androidx.compose.ui.geometry.Offset(w - len, 0f), androidx.compose.ui.geometry.Offset(w, 0f), stroke)
+                        drawLine(color, androidx.compose.ui.geometry.Offset(w, 0f), androidx.compose.ui.geometry.Offset(w, len), stroke)
+                        // Bottom-left
+                        drawLine(color, androidx.compose.ui.geometry.Offset(0f, h - len), androidx.compose.ui.geometry.Offset(0f, h), stroke)
+                        drawLine(color, androidx.compose.ui.geometry.Offset(0f, h), androidx.compose.ui.geometry.Offset(len, h), stroke)
+                        // Bottom-right
+                        drawLine(color, androidx.compose.ui.geometry.Offset(w - len, h), androidx.compose.ui.geometry.Offset(w, h), stroke)
+                        drawLine(color, androidx.compose.ui.geometry.Offset(w, h - len), androidx.compose.ui.geometry.Offset(w, h), stroke)
+                    }
 
-                // Scan line
-                if (scanning) {
-                    Box(
-                        modifier = Modifier
-                            .width(150.dp)
-                            .height(2.dp)
-                            .offset(y = scanOffset.dp)
-                            .background(
-                                brush = androidx.compose.ui.graphics.Brush.horizontalGradient(
-                                    listOf(Color.Transparent, Blue500, Color.Transparent)
+                    // Scan line
+                    if (scanning) {
+                        Box(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .height(2.dp)
+                                .offset(y = scanOffset.dp)
+                                .background(
+                                    brush = androidx.compose.ui.graphics.Brush.horizontalGradient(
+                                        listOf(Color.Transparent, Blue500, Color.Transparent)
+                                    )
                                 )
-                            )
-                    )
+                        )
+                    }
                 }
 
                 // Hint text
@@ -137,7 +137,7 @@ private fun ScanCameraScreen(onCancel: () -> Unit, onScanned: () -> Unit) {
                     modifier = Modifier
                         .align(Alignment.BottomCenter)
                         .fillMaxWidth()
-                        .padding(horizontal = 24.dp, vertical = 32.dp),
+                        .padding(horizontal = 24.dp, vertical = 24.dp),
                     textAlign = TextAlign.Center
                 )
             }
@@ -162,7 +162,7 @@ private fun ScanCameraScreen(onCancel: () -> Unit, onScanned: () -> Unit) {
                         modifier = Modifier.size(26.dp))
                 }
                 TextButton(onClick = { onCancel() }) {
-                    Text("Cancelar", color = Color.White.copy(alpha = 0.4f), fontSize = 12.sp)
+                    Text("Cancelar", color = Color.White.copy(alpha = 0.4f), fontSize = 12.sp, fontFamily = Poppins)
                 }
             }
         }
