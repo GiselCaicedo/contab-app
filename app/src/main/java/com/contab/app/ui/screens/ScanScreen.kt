@@ -76,7 +76,7 @@ private fun ScanCameraScreen(onCancel: () -> Unit, onScanned: () -> Unit) {
                     Icon(Icons.Filled.ArrowBack, null, tint = Color.White, modifier = Modifier.size(18.dp))
                 }
                 Spacer(Modifier.width(12.dp))
-                Text("Escanear recibo", color = Color.White, fontSize = 15.sp, fontWeight = FontWeight.SemiBold, fontFamily = Poppins)
+                Text("Escanear recibo", color = Color.White, fontSize = 15.sp, fontWeight = FontWeight.SemiBold)
             }
 
             Box(modifier = Modifier.weight(1f), contentAlignment = Alignment.Center) {
@@ -90,7 +90,7 @@ private fun ScanCameraScreen(onCancel: () -> Unit, onScanned: () -> Unit) {
                     Column(horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(12.dp)) {
                         Icon(Icons.Filled.CameraAlt, null, tint = Color.White.copy(alpha = 0.3f), modifier = Modifier.size(32.dp))
                         Text("Coloca el recibo\ndentro del marco", color = Color.White.copy(alpha = 0.4f),
-                            fontSize = 11.sp, textAlign = TextAlign.Center, fontFamily = Poppins, lineHeight = 16.sp)
+                            fontSize = 11.sp, textAlign = TextAlign.Center, lineHeight = 16.sp)
                     }
                 }
 
@@ -133,7 +133,7 @@ private fun ScanCameraScreen(onCancel: () -> Unit, onScanned: () -> Unit) {
                 Text(
                     "IA extrae fecha · monto · concepto · establecimiento",
                     color = Color.White.copy(alpha = 0.45f),
-                    fontSize = 11.sp, fontFamily = Poppins,
+                    fontSize = 11.sp,
                     modifier = Modifier.align(Alignment.BottomCenter).padding(bottom = 32.dp),
                     textAlign = TextAlign.Center
                 )
@@ -159,7 +159,7 @@ private fun ScanCameraScreen(onCancel: () -> Unit, onScanned: () -> Unit) {
                         modifier = Modifier.size(26.dp))
                 }
                 TextButton(onClick = { onCancel() }) {
-                    Text("Cancelar", color = Color.White.copy(alpha = 0.4f), fontSize = 12.sp, fontFamily = Poppins)
+                    Text("Cancelar", color = Color.White.copy(alpha = 0.4f), fontSize = 12.sp)
                 }
             }
         }
@@ -193,7 +193,7 @@ private fun ScanResultScreen(navController: NavController) {
                 Icon(Icons.Filled.ArrowBack, null, tint = TextColor, modifier = Modifier.size(18.dp))
             }
             Spacer(Modifier.width(12.dp))
-            Text("Datos extraídos", fontSize = 15.sp, fontWeight = FontWeight.Bold, color = TextColor, fontFamily = Poppins)
+            Text("Datos extraídos", fontSize = 15.sp, fontWeight = FontWeight.Bold, color = TextColor)
             Spacer(Modifier.weight(1f))
             Row(
                 modifier = Modifier
@@ -204,7 +204,7 @@ private fun ScanResultScreen(navController: NavController) {
                 horizontalArrangement = Arrangement.spacedBy(5.dp)
             ) {
                 Icon(Icons.Filled.Check, null, tint = SuccessColor, modifier = Modifier.size(12.dp))
-                Text("4 campos detectados", color = SuccessColor, fontSize = 11.sp, fontWeight = FontWeight.SemiBold, fontFamily = Poppins)
+                Text("4 campos detectados", color = SuccessColor, fontSize = 11.sp, fontWeight = FontWeight.SemiBold)
             }
         }
 
@@ -223,7 +223,7 @@ private fun ScanResultScreen(navController: NavController) {
                 ).forEach { (label, value, onChange) ->
                     Column(modifier = Modifier.padding(bottom = 14.dp)) {
                         Text(label, fontSize = 11.sp, color = TextSecColor, fontWeight = FontWeight.Medium,
-                            fontFamily = Poppins, modifier = Modifier.padding(bottom = 5.dp))
+                            modifier = Modifier.padding(bottom = 5.dp))
                         Box(
                             modifier = Modifier
                                 .fillMaxWidth()
@@ -235,7 +235,7 @@ private fun ScanResultScreen(navController: NavController) {
                             androidx.compose.foundation.text.BasicTextField(
                                 value = value, onValueChange = onChange,
                                 textStyle = androidx.compose.ui.text.TextStyle(
-                                    fontSize = 14.sp, color = TextColor, fontFamily = Poppins
+                                    fontSize = 14.sp, color = TextColor
                                 ),
                                 modifier = Modifier.fillMaxWidth()
                             )
@@ -244,7 +244,7 @@ private fun ScanResultScreen(navController: NavController) {
                 }
 
                 Text("Categoría", fontSize = 11.sp, color = TextSecColor, fontWeight = FontWeight.Medium,
-                    fontFamily = Poppins, modifier = Modifier.padding(bottom = 8.dp))
+                    modifier = Modifier.padding(bottom = 8.dp))
                 androidx.compose.foundation.layout.FlowRow(horizontalArrangement = Arrangement.spacedBy(7.dp),
                     verticalArrangement = Arrangement.spacedBy(7.dp)) {
                     ALL_CATEGORIES.take(6).forEach { cat ->
@@ -260,8 +260,7 @@ private fun ScanResultScreen(navController: NavController) {
                         ) {
                             Text(cat.label, fontSize = 11.sp,
                                 color = if (active) cat.color else TextSecColor,
-                                fontWeight = if (active) FontWeight.SemiBold else FontWeight.Normal,
-                                fontFamily = Poppins)
+                                fontWeight = if (active) FontWeight.SemiBold else FontWeight.Normal)
                         }
                     }
                 }
@@ -276,7 +275,7 @@ private fun ScanResultScreen(navController: NavController) {
             colors = ButtonDefaults.buttonColors(containerColor = Blue500),
             elevation = ButtonDefaults.buttonElevation(6.dp)
         ) {
-            Text("Guardar gasto", fontSize = 15.sp, fontWeight = FontWeight.Bold, fontFamily = Poppins)
+            Text("Guardar gasto", fontSize = 15.sp, fontWeight = FontWeight.Bold)
         }
         Spacer(Modifier.height(16.dp))
     }

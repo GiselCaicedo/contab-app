@@ -67,7 +67,6 @@ import com.contab.app.ui.theme.Blue50
 import com.contab.app.ui.theme.Blue500
 import com.contab.app.ui.theme.Blue600
 import com.contab.app.ui.theme.Blue700
-import com.contab.app.ui.theme.Poppins
 import com.contab.app.ui.theme.SuccessColor
 import com.contab.app.ui.theme.SurfaceColor
 import com.contab.app.ui.theme.TextColor
@@ -142,7 +141,6 @@ fun DashboardScreen(navController: NavController) {
                     text = "Buenos días,",
                     fontSize = 12.sp,
                     color = TextSecColor,
-                    fontFamily = Poppins,
                 )
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     Text(
@@ -150,7 +148,6 @@ fun DashboardScreen(navController: NavController) {
                         fontSize = 20.sp,
                         fontWeight = FontWeight.Bold,
                         color = TextColor,
-                        fontFamily = Poppins,
                     )
                     Spacer(Modifier.width(4.dp))
                     Text(
@@ -158,7 +155,6 @@ fun DashboardScreen(navController: NavController) {
                         fontSize = 20.sp,
                         fontWeight = FontWeight.Bold,
                         color = Blue500,
-                        fontFamily = Poppins,
                     )
                 }
             }
@@ -287,7 +283,6 @@ private fun HeroCard(
                             fontSize = 11.sp,
                             fontWeight = FontWeight.SemiBold,
                             color = Blue700,
-                            fontFamily = Poppins,
                         )
                     }
 
@@ -297,7 +292,6 @@ private fun HeroCard(
                         text = "Has gastado",
                         fontSize = 11.sp,
                         color = TextSecColor,
-                        fontFamily = Poppins,
                     )
 
                     Spacer(Modifier.height(2.dp))
@@ -307,7 +301,6 @@ private fun HeroCard(
                         fontSize = 30.sp,
                         fontWeight = FontWeight.Bold,
                         color = TextColor,
-                        fontFamily = Poppins,
                         letterSpacing = (-0.5).sp,
                     )
 
@@ -333,7 +326,6 @@ private fun HeroCard(
                             fontSize = 11.sp,
                             fontWeight = FontWeight.SemiBold,
                             color = SuccessColor,
-                            fontFamily = Poppins,
                         )
                     }
                 }
@@ -365,14 +357,12 @@ private fun HeroCard(
                         text = "Disponible",
                         fontSize = 11.sp,
                         color = TextSecColor,
-                        fontFamily = Poppins,
                     )
                     Text(
                         text = formatCOP(available),
                         fontSize = 15.sp,
                         fontWeight = FontWeight.Bold,
                         color = TextColor,
-                        fontFamily = Poppins,
                     )
                 }
 
@@ -389,7 +379,6 @@ private fun HeroCard(
                         fontSize = 12.sp,
                         fontWeight = FontWeight.SemiBold,
                         color = Color.White,
-                        fontFamily = Poppins,
                     )
                 }
             }
@@ -443,13 +432,11 @@ private fun BudgetRing(progress: Float, size: Dp, stroke: Dp) {
                 fontSize = 15.sp,
                 fontWeight = FontWeight.Bold,
                 color = Blue700,
-                fontFamily = Poppins,
             )
             Text(
                 text = "presupuesto",
                 fontSize = 8.sp,
                 color = TextSecColor,
-                fontFamily = Poppins,
             )
         }
     }
@@ -497,14 +484,12 @@ private fun HeatmapCard(heatData: List<Int>) {
                     fontSize = 13.sp,
                     fontWeight = FontWeight.Bold,
                     color = TextColor,
-                    fontFamily = Poppins,
                 )
                 Text(
                     text = "72 días activos",
                     fontSize = 11.sp,
                     color = Blue500,
                     fontWeight = FontWeight.SemiBold,
-                    fontFamily = Poppins,
                 )
             }
 
@@ -512,7 +497,6 @@ private fun HeatmapCard(heatData: List<Int>) {
                 text = "Últimas 12 semanas",
                 fontSize = 10.sp,
                 color = TextSecColor,
-                fontFamily = Poppins,
                 modifier = Modifier.padding(top = 2.dp, bottom = 10.dp)
             )
 
@@ -529,7 +513,6 @@ private fun HeatmapCard(heatData: List<Int>) {
                                 text = label,
                                 fontSize = 8.sp,
                                 color = TextSecColor,
-                                fontFamily = Poppins,
                             )
                         }
                     }
@@ -556,7 +539,6 @@ private fun HeatmapCard(heatData: List<Int>) {
                                     text = label,
                                     fontSize = 8.sp,
                                     color = TextSecColor,
-                                    fontFamily = Poppins,
                                 )
                             }
                         }
@@ -595,7 +577,7 @@ private fun HeatmapCard(heatData: List<Int>) {
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(4.dp)
             ) {
-                Text("Menos", fontSize = 9.sp, color = TextSecColor, fontFamily = Poppins)
+                Text("Menos", fontSize = 9.sp, color = TextSecColor)
                 Spacer(Modifier.width(2.dp))
                 listOf(0, 1, 2, 3, 4).forEach { level ->
                     Box(
@@ -606,7 +588,7 @@ private fun HeatmapCard(heatData: List<Int>) {
                     )
                 }
                 Spacer(Modifier.width(2.dp))
-                Text("Más", fontSize = 9.sp, color = TextSecColor, fontFamily = Poppins)
+                Text("Más", fontSize = 9.sp, color = TextSecColor)
             }
         }
     }
@@ -634,14 +616,12 @@ private fun TopCategoriasSection(
                 fontSize = 14.sp,
                 fontWeight = FontWeight.Bold,
                 color = TextColor,
-                fontFamily = Poppins,
             )
             Text(
                 text = "Ver todas",
                 fontSize = 12.sp,
                 color = Blue500,
                 fontWeight = FontWeight.SemiBold,
-                fontFamily = Poppins,
                 modifier = Modifier.clickable { onVerTodas() }
             )
         }
@@ -705,7 +685,6 @@ private fun TopCategoriasSection(
                                 color = Color.White.copy(alpha = 0.70f),
                                 fontWeight = FontWeight.SemiBold,
                                 letterSpacing = 0.8.sp,
-                                fontFamily = Poppins,
                             )
                             Spacer(Modifier.height(2.dp))
                             Text(
@@ -713,14 +692,12 @@ private fun TopCategoriasSection(
                                 fontSize = 18.sp,
                                 fontWeight = FontWeight.Bold,
                                 color = Color.White,
-                                fontFamily = Poppins,
                             )
                             Spacer(Modifier.height(2.dp))
                             Text(
                                 text = "${"%.0f".format(big.second / totalMonth * 100)}% del mes",
                                 fontSize = 10.sp,
                                 color = Color.White.copy(alpha = 0.65f),
-                                fontFamily = Poppins,
                             )
                         }
                     }
@@ -773,7 +750,6 @@ private fun SmallCategoryCard(category: Category, amount: Long) {
                 text = category.label,
                 fontSize = 9.sp,
                 color = TextSecColor,
-                fontFamily = Poppins,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
             )
@@ -782,7 +758,6 @@ private fun SmallCategoryCard(category: Category, amount: Long) {
                 fontSize = 12.sp,
                 fontWeight = FontWeight.Bold,
                 color = TextColor,
-                fontFamily = Poppins,
             )
         }
     }
@@ -808,14 +783,12 @@ private fun MovimientosSection(
                 fontSize = 14.sp,
                 fontWeight = FontWeight.Bold,
                 color = TextColor,
-                fontFamily = Poppins,
             )
             Text(
                 text = "Ver todo",
                 fontSize = 12.sp,
                 color = Blue500,
                 fontWeight = FontWeight.SemiBold,
-                fontFamily = Poppins,
                 modifier = Modifier.clickable { onVerTodo() }
             )
         }
@@ -861,7 +834,6 @@ private fun TransactionDateGroup(
                 fontSize = 14.sp,
                 fontWeight = FontWeight.Bold,
                 color = if (isToday) Color.White else TextColor,
-                fontFamily = Poppins,
             )
         }
 
@@ -878,14 +850,12 @@ private fun TransactionDateGroup(
                     fontSize = 13.sp,
                     fontWeight = FontWeight.Bold,
                     color = TextColor,
-                    fontFamily = Poppins,
                 )
                 Text(
                     text = "–${formatCOP(groupTotal)}",
                     fontSize = 12.sp,
                     fontWeight = FontWeight.SemiBold,
                     color = Blue700,
-                    fontFamily = Poppins,
                 )
             }
 
@@ -893,7 +863,6 @@ private fun TransactionDateGroup(
                 text = "${transactions.size} movimiento${if (transactions.size != 1) "s" else ""}",
                 fontSize = 10.sp,
                 color = TextSecColor,
-                fontFamily = Poppins,
                 modifier = Modifier.padding(bottom = 6.dp)
             )
 
@@ -957,7 +926,6 @@ private fun DashboardTransactionRow(tx: Transaction) {
                 fontSize = 12.5.sp,
                 fontWeight = FontWeight.SemiBold,
                 color = TextColor,
-                fontFamily = Poppins,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
             )
@@ -977,7 +945,6 @@ private fun DashboardTransactionRow(tx: Transaction) {
                         text = cat.label,
                         fontSize = 9.5.sp,
                         color = Blue700,
-                        fontFamily = Poppins,
                         fontWeight = FontWeight.Medium,
                     )
                 }
@@ -992,7 +959,6 @@ private fun DashboardTransactionRow(tx: Transaction) {
                     text = methodLabel(tx.method),
                     fontSize = 9.5.sp,
                     color = TextSecColor,
-                    fontFamily = Poppins,
                 )
             }
         }
@@ -1003,7 +969,6 @@ private fun DashboardTransactionRow(tx: Transaction) {
             fontSize = 13.sp,
             fontWeight = FontWeight.Bold,
             color = TextColor,
-            fontFamily = Poppins,
         )
     }
 }

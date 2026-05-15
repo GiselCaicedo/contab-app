@@ -63,7 +63,6 @@ import com.contab.app.ui.theme.Blue500
 import com.contab.app.ui.theme.Blue600
 import com.contab.app.ui.theme.Blue700
 import com.contab.app.ui.theme.BorderColor
-import com.contab.app.ui.theme.Poppins
 import com.contab.app.ui.theme.SurfaceColor
 import com.contab.app.ui.theme.TextColor
 import com.contab.app.ui.theme.TextSecColor
@@ -130,7 +129,6 @@ fun CategoriesScreen() {
                     text = "${categories.size} activas · organiza tus gastos",
                     fontSize = 11.sp,
                     color = TextSecColor,
-                    fontFamily = Poppins
                 )
                 Box(
                     modifier = Modifier
@@ -160,7 +158,6 @@ fun CategoriesScreen() {
                             fontSize = 12.sp,
                             fontWeight = FontWeight.SemiBold,
                             color = Color.White,
-                            fontFamily = Poppins
                         )
                     }
                 }
@@ -191,7 +188,6 @@ fun CategoriesScreen() {
                             fontSize = 13.sp,
                             fontWeight = FontWeight.Bold,
                             color = TextColor,
-                            fontFamily = Poppins
                         )
 
                         // Name field with placeholder
@@ -208,7 +204,6 @@ fun CategoriesScreen() {
                                     text = "Nombre de la categoría",
                                     fontSize = 13.sp,
                                     color = TextSecColor.copy(alpha = 0.55f),
-                                    fontFamily = Poppins
                                 )
                             }
                             BasicTextField(
@@ -217,7 +212,6 @@ fun CategoriesScreen() {
                                 textStyle = TextStyle(
                                     fontSize = 13.sp,
                                     color = TextColor,
-                                    fontFamily = Poppins,
                                     fontWeight = FontWeight.Medium
                                 ),
                                 cursorBrush = SolidColor(Blue500),
@@ -231,7 +225,6 @@ fun CategoriesScreen() {
                             fontSize = 11.sp,
                             fontWeight = FontWeight.SemiBold,
                             color = TextSecColor,
-                            fontFamily = Poppins
                         )
                         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                             COLOR_PALETTE.forEach { color ->
@@ -283,7 +276,6 @@ fun CategoriesScreen() {
                                     fontSize = 13.sp,
                                     fontWeight = FontWeight.Medium,
                                     color = TextSecColor,
-                                    fontFamily = Poppins
                                 )
                             }
                             Box(
@@ -314,7 +306,6 @@ fun CategoriesScreen() {
                                     fontSize = 13.sp,
                                     fontWeight = FontWeight.SemiBold,
                                     color = Color.White,
-                                    fontFamily = Poppins
                                 )
                             }
                         }
@@ -354,14 +345,12 @@ fun CategoriesScreen() {
                             text = "Total clasificado",
                             fontSize = 10.sp,
                             color = Color.White.copy(alpha = 0.70f),
-                            fontFamily = Poppins
                         )
                         Text(
                             text = formatCOP(grandTotal),
                             fontSize = 17.sp,
                             fontWeight = FontWeight.Bold,
                             color = Color.White,
-                            fontFamily = Poppins
                         )
                     }
                     Column(horizontalAlignment = Alignment.End) {
@@ -369,14 +358,12 @@ fun CategoriesScreen() {
                             text = "Movimientos",
                             fontSize = 10.sp,
                             color = Color.White.copy(alpha = 0.70f),
-                            fontFamily = Poppins
                         )
                         Text(
                             text = "$totalMovements",
                             fontSize = 17.sp,
                             fontWeight = FontWeight.Bold,
                             color = Color.White,
-                            fontFamily = Poppins
                         )
                     }
                 }
@@ -456,14 +443,12 @@ fun CategoriesScreen() {
                                             fontSize = 12.5.sp,
                                             fontWeight = FontWeight.SemiBold,
                                             color = TextColor,
-                                            fontFamily = Poppins
                                         )
                                         Text(
                                             text = if (amtSpent > 0) formatCOP(amtSpent) else "—",
                                             fontSize = 11.5.sp,
                                             fontWeight = FontWeight.Bold,
                                             color = TextColor,
-                                            fontFamily = Poppins
                                         )
                                     }
                                     Spacer(Modifier.height(5.dp))
@@ -492,7 +477,6 @@ fun CategoriesScreen() {
                                             text = "$txCount ${if (txCount == 1) "gasto" else "gastos"}",
                                             fontSize = 10.sp,
                                             color = TextSecColor,
-                                            fontFamily = Poppins
                                         )
                                     }
                                 }

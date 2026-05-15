@@ -70,7 +70,7 @@ fun ContabApp() {
                             "insights" -> "Insights"
                             else -> ""
                         },
-                        fontSize = 17.sp, fontWeight = FontWeight.Bold, color = TextColor, fontFamily = Poppins
+                        fontSize = 17.sp, fontWeight = FontWeight.Bold, color = TextColor
                     )
                     if (currentRoute == "history") {
                         Box(
@@ -79,7 +79,7 @@ fun ContabApp() {
                                 .padding(horizontal = 12.dp, vertical = 5.dp)
                         ) {
                             Text("Categorías", fontSize = 11.sp, color = Blue500,
-                                fontWeight = FontWeight.SemiBold, fontFamily = Poppins)
+                                fontWeight = FontWeight.SemiBold)
                         }
                     }
                 }
@@ -90,7 +90,7 @@ fun ContabApp() {
                         .padding(horizontal = 16.dp, vertical = 12.dp)
                 ) {
                     Text("Categorías", fontSize = 17.sp, fontWeight = FontWeight.Bold,
-                        color = TextColor, fontFamily = Poppins)
+                        color = TextColor)
                 }
             }
 
@@ -135,7 +135,7 @@ fun ContabApp() {
                         ) {
                             Icon(Icons.Filled.Check, null, tint = SuccessColor, modifier = Modifier.size(14.dp))
                             Text(toast ?: "", fontSize = 12.sp, color = SurfaceColor,
-                                fontWeight = FontWeight.Medium, fontFamily = Poppins)
+                                fontWeight = FontWeight.Medium)
                         }
                     }
                 }

@@ -63,7 +63,6 @@ import com.contab.app.ui.theme.Blue50
 import com.contab.app.ui.theme.Blue500
 import com.contab.app.ui.theme.Blue600
 import com.contab.app.ui.theme.Blue700
-import com.contab.app.ui.theme.Poppins
 import com.contab.app.ui.theme.SurfaceColor
 import com.contab.app.ui.theme.TextColor
 import com.contab.app.ui.theme.TextSecColor
@@ -159,7 +158,6 @@ fun ReportsScreen() {
                                 fontSize = 12.sp,
                                 fontWeight = if (isActive) FontWeight.SemiBold else FontWeight.Normal,
                                 color = if (isActive) Color.White else TextSecColor,
-                                fontFamily = Poppins
                             )
                         }
                     }
@@ -228,20 +226,17 @@ fun ReportsScreen() {
                                 text = "Total",
                                 fontSize = 9.sp,
                                 color = TextSecColor,
-                                fontFamily = Poppins
                             )
                             Text(
                                 text = formatCOP(totalSpent),
                                 fontSize = 14.sp,
                                 fontWeight = FontWeight.Bold,
                                 color = TextColor,
-                                fontFamily = Poppins
                             )
                             Text(
                                 text = "Abril 2026",
                                 fontSize = 9.sp,
                                 color = TextSecColor,
-                                fontFamily = Poppins
                             )
                         }
                     }
@@ -270,7 +265,6 @@ fun ReportsScreen() {
                                     text = cat.label,
                                     fontSize = 10.5.sp,
                                     color = TextColor,
-                                    fontFamily = Poppins,
                                     modifier = Modifier.weight(1f),
                                     maxLines = 1
                                 )
@@ -278,7 +272,6 @@ fun ReportsScreen() {
                                     text = "$pct%",
                                     fontSize = 10.sp,
                                     color = TextSecColor,
-                                    fontFamily = Poppins
                                 )
                             }
                         }
@@ -320,13 +313,11 @@ fun ReportsScreen() {
                         fontSize = 10.5.sp,
                         fontWeight = FontWeight.Bold,
                         color = Color(0xFF07266E), // Blue800
-                        fontFamily = Poppins
                     )
                     Text(
                         text = "$ 60.500 de ahorro este mes",
                         fontSize = 9.5.sp,
                         color = Blue700,
-                        fontFamily = Poppins
                     )
                 }
             }
@@ -353,13 +344,11 @@ fun ReportsScreen() {
                         fontSize = 13.sp,
                         fontWeight = FontWeight.SemiBold,
                         color = TextColor,
-                        fontFamily = Poppins
                     )
                     Text(
                         text = "Últimos 6 meses",
                         fontSize = 10.sp,
                         color = TextSecColor,
-                        fontFamily = Poppins
                     )
                 }
 
@@ -425,7 +414,6 @@ fun ReportsScreen() {
                             color = if (isCurrent) Blue700 else TextSecColor,
                             modifier = Modifier.weight(1f),
                             textAlign = TextAlign.Center,
-                            fontFamily = Poppins
                         )
                     }
                 }
@@ -443,7 +431,6 @@ fun ReportsScreen() {
                     fontSize = 13.sp,
                     fontWeight = FontWeight.Bold,
                     color = TextColor,
-                    fontFamily = Poppins,
                     modifier = Modifier.padding(bottom = 10.dp)
                 )
 
@@ -513,14 +500,12 @@ fun ReportsScreen() {
                                                 fontSize = 12.sp,
                                                 fontWeight = FontWeight.SemiBold,
                                                 color = TextColor,
-                                                fontFamily = Poppins
                                             )
                                             Text(
                                                 text = formatCOP(amt),
                                                 fontSize = 11.5.sp,
                                                 fontWeight = FontWeight.Bold,
                                                 color = TextColor,
-                                                fontFamily = Poppins
                                             )
                                         }
                                         Spacer(Modifier.height(5.dp))
@@ -548,7 +533,6 @@ fun ReportsScreen() {
                                                 text = "${(pct * 100).toInt()}%",
                                                 fontSize = 9.5.sp,
                                                 color = TextSecColor,
-                                                fontFamily = Poppins
                                             )
                                         }
                                     }

@@ -65,7 +65,7 @@ fun VoiceScreen(navController: NavController) {
                 Icon(Icons.Filled.ArrowBack, null, tint = TextColor, modifier = Modifier.size(18.dp))
             }
             Spacer(Modifier.width(12.dp))
-            Text("Ingreso por voz", fontSize = 15.sp, fontWeight = FontWeight.Bold, color = TextColor, fontFamily = Poppins)
+            Text("Ingreso por voz", fontSize = 15.sp, fontWeight = FontWeight.Bold, color = TextColor)
         }
 
         Spacer(Modifier.weight(0.3f))
@@ -126,7 +126,7 @@ fun VoiceScreen(navController: NavController) {
                 else -> "Entendido. Confirma el registro:"
             },
             fontSize = 13.sp, color = TextSecColor, textAlign = TextAlign.Center,
-            fontFamily = Poppins, lineHeight = 20.sp,
+            lineHeight = 20.sp,
             modifier = Modifier.padding(horizontal = 24.dp)
         )
 
@@ -141,14 +141,14 @@ fun VoiceScreen(navController: NavController) {
             ) {
                 Column(modifier = Modifier.padding(18.dp)) {
                     Text("Transcripción", fontSize = 11.sp, color = TextSecColor,
-                        fontWeight = FontWeight.Medium, fontFamily = Poppins,
+                        fontWeight = FontWeight.Medium,
                         modifier = Modifier.padding(bottom = 6.dp))
                     Row(
                         modifier = Modifier
                             .border(2.dp, Blue500, RoundedCornerShape(topStart = 0.dp, bottomStart = 0.dp))
                             .padding(start = 10.dp, bottom = 16.dp)
                     ) {
-                        Text("\"$transcript\"", fontSize = 13.sp, color = TextColor, fontFamily = Poppins,
+                        Text("\"$transcript\"", fontSize = 13.sp, color = TextColor,
                             fontStyle = FontStyle.Italic, lineHeight = 20.sp)
                     }
 
@@ -158,9 +158,9 @@ fun VoiceScreen(navController: NavController) {
                                 modifier = Modifier.weight(1f).clip(RoundedCornerShape(10.dp))
                                     .background(BgColor).padding(8.dp, 8.dp)
                             ) {
-                                Text(lbl, fontSize = 10.sp, color = TextSecColor, fontFamily = Poppins,
+                                Text(lbl, fontSize = 10.sp, color = TextSecColor,
                                     modifier = Modifier.padding(bottom = 2.dp))
-                                Text(val_, fontSize = 12.sp, fontWeight = FontWeight.Bold, color = TextColor, fontFamily = Poppins)
+                                Text(val_, fontSize = 12.sp, fontWeight = FontWeight.Bold, color = TextColor)
                             }
                         }
                     }
@@ -178,7 +178,7 @@ fun VoiceScreen(navController: NavController) {
                 colors = ButtonDefaults.buttonColors(containerColor = Blue500),
                 elevation = ButtonDefaults.buttonElevation(6.dp)
             ) {
-                Text("Guardar gasto", fontSize = 15.sp, fontWeight = FontWeight.Bold, fontFamily = Poppins)
+                Text("Guardar gasto", fontSize = 15.sp, fontWeight = FontWeight.Bold)
             }
         } else {
             Spacer(Modifier.height(32.dp))

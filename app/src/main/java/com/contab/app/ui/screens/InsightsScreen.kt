@@ -44,7 +44,6 @@ import com.contab.app.ui.theme.Blue50
 import com.contab.app.ui.theme.Blue500
 import com.contab.app.ui.theme.Blue600
 import com.contab.app.ui.theme.BorderColor
-import com.contab.app.ui.theme.Poppins
 import com.contab.app.ui.theme.SurfaceColor
 import com.contab.app.ui.theme.TextColor
 import com.contab.app.ui.theme.TextSecColor
@@ -142,7 +141,6 @@ fun InsightsScreen() {
                         fontSize = 11.sp,
                         fontWeight = FontWeight.Medium,
                         letterSpacing = 0.8.sp,
-                        fontFamily = Poppins
                     )
                     Spacer(Modifier.height(10.dp))
                     Row(
@@ -171,14 +169,12 @@ fun InsightsScreen() {
                                 fontSize = 18.sp,
                                 fontWeight = FontWeight.Bold,
                                 color = Color.White,
-                                fontFamily = Poppins
                             )
                             Text(
                                 text = "$ 304.000",
                                 fontSize = 14.sp,
                                 fontWeight = FontWeight.SemiBold,
                                 color = Color.White.copy(alpha = 0.85f),
-                                fontFamily = Poppins
                             )
                         }
                         // Percentage badge
@@ -193,7 +189,6 @@ fun InsightsScreen() {
                                 fontSize = 13.sp,
                                 fontWeight = FontWeight.Bold,
                                 color = Color.White,
-                                fontFamily = Poppins
                             )
                         }
                     }
@@ -219,13 +214,11 @@ fun InsightsScreen() {
                         fontSize = 13.sp,
                         fontWeight = FontWeight.Bold,
                         color = TextColor,
-                        fontFamily = Poppins
                     )
                     Text(
                         text = "$answeredCount/4",
                         fontSize = 12.sp,
                         color = TextSecColor,
-                        fontFamily = Poppins
                     )
                 }
                 Spacer(Modifier.height(8.dp))
@@ -296,7 +289,6 @@ fun InsightsScreen() {
                                     fontSize = 10.sp,
                                     fontWeight = FontWeight.Bold,
                                     color = Blue600,
-                                    fontFamily = Poppins
                                 )
                             }
                             Text(
@@ -304,7 +296,6 @@ fun InsightsScreen() {
                                 fontSize = 13.sp,
                                 fontWeight = FontWeight.SemiBold,
                                 color = TextColor,
-                                fontFamily = Poppins,
                                 modifier = Modifier.weight(1f),
                                 lineHeight = 18.sp
                             )
@@ -338,7 +329,6 @@ fun InsightsScreen() {
                                         fontSize = 12.sp,
                                         fontWeight = FontWeight.Medium,
                                         color = if (isSelected) Color.White else TextSecColor,
-                                        fontFamily = Poppins
                                     )
                                 }
                             }
@@ -369,7 +359,6 @@ fun InsightsScreen() {
                                     fontSize = 11.sp,
                                     color = Blue500,
                                     lineHeight = 15.sp,
-                                    fontFamily = Poppins
                                 )
                             }
                         }
@@ -391,7 +380,6 @@ fun InsightsScreen() {
                         fontSize = 15.sp,
                         fontWeight = FontWeight.Bold,
                         color = TextColor,
-                        fontFamily = Poppins
                     )
                     Spacer(Modifier.height(10.dp))
                     Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
@@ -425,7 +413,6 @@ fun InsightsScreen() {
                                         fontSize = 13.sp,
                                         fontWeight = FontWeight.SemiBold,
                                         color = TextColor,
-                                        fontFamily = Poppins
                                     )
                                     Spacer(Modifier.height(2.dp))
                                     Text(
@@ -433,7 +420,6 @@ fun InsightsScreen() {
                                         fontSize = 11.sp,
                                         color = TextSecColor,
                                         lineHeight = 15.sp,
-                                        fontFamily = Poppins
                                     )
                                 }
                             }

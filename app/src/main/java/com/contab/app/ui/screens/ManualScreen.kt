@@ -50,7 +50,7 @@ fun ManualScreen(navController: NavController) {
                 Icon(Icons.Filled.ArrowBack, null, tint = TextColor, modifier = Modifier.size(18.dp))
             }
             Spacer(Modifier.width(12.dp))
-            Text("Nuevo gasto", fontSize = 15.sp, fontWeight = FontWeight.Bold, color = TextColor, fontFamily = Poppins)
+            Text("Nuevo gasto", fontSize = 15.sp, fontWeight = FontWeight.Bold, color = TextColor)
         }
 
         // Amount
@@ -60,11 +60,11 @@ fun ManualScreen(navController: NavController) {
         ) {
             Text("¿CUÁNTO GASTASTE?", fontSize = 11.sp, color = TextSecColor,
                 fontWeight = FontWeight.Medium, letterSpacing = 0.4.sp,
-                fontFamily = Poppins, modifier = Modifier.padding(bottom = 10.dp))
+                modifier = Modifier.padding(bottom = 10.dp))
 
             Row(verticalAlignment = Alignment.Bottom, horizontalArrangement = Arrangement.Center) {
                 Text("$", fontSize = 26.sp, color = TextSecColor, fontWeight = FontWeight.Light,
-                    fontFamily = Poppins, modifier = Modifier.padding(bottom = 4.dp))
+                    modifier = Modifier.padding(bottom = 4.dp))
                 Spacer(Modifier.width(4.dp))
                 BasicTextField(
                     value = amount,
@@ -72,21 +72,21 @@ fun ManualScreen(navController: NavController) {
                     keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
                     textStyle = TextStyle(
                         fontSize = 44.sp, fontWeight = FontWeight.Bold, color = TextColor,
-                        fontFamily = Poppins, textAlign = TextAlign.Center
+                        textAlign = TextAlign.Center
                     ),
                     decorationBox = { inner ->
                         Box(modifier = Modifier.width(190.dp), contentAlignment = Alignment.Center) {
                             if (amount.isEmpty()) {
                                 Text("0", fontSize = 44.sp, fontWeight = FontWeight.Bold,
                                     color = TextSecColor.copy(alpha = 0.3f),
-                                    fontFamily = Poppins, textAlign = TextAlign.Center)
+                                    textAlign = TextAlign.Center)
                             }
                             inner()
                         }
                     }
                 )
                 Spacer(Modifier.width(4.dp))
-                Text("COP", fontSize = 14.sp, color = TextSecColor, fontFamily = Poppins,
+                Text("COP", fontSize = 14.sp, color = TextSecColor,
                     modifier = Modifier.padding(bottom = 4.dp))
             }
 
@@ -113,17 +113,17 @@ fun ManualScreen(navController: NavController) {
             ) {
                 Column(modifier = Modifier.padding(horizontal = 16.dp, vertical = 13.dp)) {
                     Text("Concepto", fontSize = 11.sp, color = TextSecColor,
-                        fontWeight = FontWeight.Medium, fontFamily = Poppins,
+                        fontWeight = FontWeight.Medium,
                         modifier = Modifier.padding(bottom = 5.dp))
                     BasicTextField(
                         value = concept,
                         onValueChange = { concept = it },
-                        textStyle = TextStyle(fontSize = 14.sp, color = TextColor, fontFamily = Poppins),
+                        textStyle = TextStyle(fontSize = 14.sp, color = TextColor),
                         modifier = Modifier.fillMaxWidth(),
                         decorationBox = { inner ->
                             Box {
                                 if (concept.isEmpty()) Text("Ej: Almuerzo en restaurante",
-                                    fontSize = 14.sp, color = TextSecColor.copy(alpha = 0.5f), fontFamily = Poppins)
+                                    fontSize = 14.sp, color = TextSecColor.copy(alpha = 0.5f))
                                 inner()
                             }
                         }
@@ -145,12 +145,12 @@ fun ManualScreen(navController: NavController) {
                     Icon(Icons.Outlined.CalendarMonth, null, tint = TextSecColor, modifier = Modifier.size(16.dp))
                     Column(modifier = Modifier.weight(1f)) {
                         Text("Fecha", fontSize = 11.sp, color = TextSecColor,
-                            fontWeight = FontWeight.Medium, fontFamily = Poppins,
+                            fontWeight = FontWeight.Medium,
                             modifier = Modifier.padding(bottom = 3.dp))
                         BasicTextField(
                             value = date,
                             onValueChange = { date = it },
-                            textStyle = TextStyle(fontSize = 13.sp, color = TextColor, fontFamily = Poppins),
+                            textStyle = TextStyle(fontSize = 13.sp, color = TextColor),
                             modifier = Modifier.fillMaxWidth()
                         )
                     }
@@ -165,7 +165,7 @@ fun ManualScreen(navController: NavController) {
             ) {
                 Column(modifier = Modifier.padding(16.dp)) {
                     Text("Categoría", fontSize = 11.sp, color = TextSecColor,
-                        fontWeight = FontWeight.Medium, fontFamily = Poppins,
+                        fontWeight = FontWeight.Medium,
                         modifier = Modifier.padding(bottom = 10.dp))
                     androidx.compose.foundation.layout.FlowRow(
                         horizontalArrangement = Arrangement.spacedBy(7.dp),
@@ -189,8 +189,7 @@ fun ManualScreen(navController: NavController) {
                             ) {
                                 Text(cat.label, fontSize = 11.sp,
                                     color = if (active) cat.color else TextSecColor,
-                                    fontWeight = if (active) FontWeight.SemiBold else FontWeight.Normal,
-                                    fontFamily = Poppins)
+                                    fontWeight = if (active) FontWeight.SemiBold else FontWeight.Normal)
                             }
                         }
                     }
@@ -204,7 +203,7 @@ fun ManualScreen(navController: NavController) {
                 colors = ButtonDefaults.buttonColors(containerColor = Blue500),
                 elevation = ButtonDefaults.buttonElevation(6.dp)
             ) {
-                Text("Guardar gasto", fontSize = 15.sp, fontWeight = FontWeight.Bold, fontFamily = Poppins)
+                Text("Guardar gasto", fontSize = 15.sp, fontWeight = FontWeight.Bold)
             }
         }
 

@@ -68,7 +68,6 @@ import com.contab.app.ui.theme.Blue500
 import com.contab.app.ui.theme.Blue600
 import com.contab.app.ui.theme.Blue700
 import com.contab.app.ui.theme.DangerColor
-import com.contab.app.ui.theme.Poppins
 import com.contab.app.ui.theme.SurfaceColor
 import com.contab.app.ui.theme.TextColor
 import com.contab.app.ui.theme.TextSecColor
@@ -173,7 +172,6 @@ fun HistoryScreen() {
                                 text = "Buscar movimiento…",
                                 fontSize = 13.sp,
                                 color = TextSecColor,
-                                fontFamily = Poppins,
                             )
                         }
                         BasicTextField(
@@ -183,7 +181,6 @@ fun HistoryScreen() {
                             textStyle = TextStyle(
                                 fontSize = 13.sp,
                                 color = TextColor,
-                                fontFamily = Poppins,
                                 fontWeight = FontWeight.Normal,
                             ),
                             cursorBrush = SolidColor(Blue500),
@@ -247,7 +244,6 @@ fun HistoryScreen() {
                             fontSize = 12.sp,
                             fontWeight = if (isActive) FontWeight.SemiBold else FontWeight.Normal,
                             color = if (isActive) Color.White else TextSecColor,
-                            fontFamily = Poppins,
                         )
                     }
                 }
@@ -272,14 +268,12 @@ fun HistoryScreen() {
                     text = "${filtered.size} registro${if (filtered.size != 1) "s" else ""}",
                     fontSize = 12.sp,
                     color = TextSecColor,
-                    fontFamily = Poppins,
                 )
                 Text(
                     text = "–${formatCOP(totalFiltered)}",
                     fontSize = 13.sp,
                     fontWeight = FontWeight.Bold,
                     color = Blue700,
-                    fontFamily = Poppins,
                 )
             }
         }
@@ -333,7 +327,6 @@ private fun HistoryDateGroup(
                 fontSize = 14.sp,
                 fontWeight = FontWeight.Bold,
                 color = if (isToday) Color.White else TextColor,
-                fontFamily = Poppins,
             )
         }
 
@@ -350,14 +343,12 @@ private fun HistoryDateGroup(
                     fontSize = 13.sp,
                     fontWeight = FontWeight.Bold,
                     color = TextColor,
-                    fontFamily = Poppins,
                 )
                 Text(
                     text = "–${formatCOP(groupTotal)}",
                     fontSize = 12.sp,
                     fontWeight = FontWeight.SemiBold,
                     color = Blue700,
-                    fontFamily = Poppins,
                 )
             }
 
@@ -365,7 +356,6 @@ private fun HistoryDateGroup(
                 text = "${transactions.size} movimiento${if (transactions.size != 1) "s" else ""}",
                 fontSize = 10.sp,
                 color = TextSecColor,
-                fontFamily = Poppins,
                 modifier = Modifier.padding(bottom = 6.dp)
             )
 
@@ -432,7 +422,6 @@ private fun HistoryTransactionRow(tx: Transaction) {
                 fontSize = 12.5.sp,
                 fontWeight = FontWeight.SemiBold,
                 color = TextColor,
-                fontFamily = Poppins,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
             )
@@ -452,7 +441,6 @@ private fun HistoryTransactionRow(tx: Transaction) {
                         text = cat.label,
                         fontSize = 9.5.sp,
                         color = Blue700,
-                        fontFamily = Poppins,
                         fontWeight = FontWeight.Medium,
                     )
                 }
@@ -467,7 +455,6 @@ private fun HistoryTransactionRow(tx: Transaction) {
                     text = historyMethodLabel(tx.method),
                     fontSize = 9.5.sp,
                     color = TextSecColor,
-                    fontFamily = Poppins,
                 )
             }
         }
@@ -482,7 +469,6 @@ private fun HistoryTransactionRow(tx: Transaction) {
                 fontSize = 13.sp,
                 fontWeight = FontWeight.Bold,
                 color = TextColor,
-                fontFamily = Poppins,
             )
             Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
                 // Edit button
