@@ -133,15 +133,18 @@ private fun ScanCameraScreen(onCancel: () -> Unit, onScanned: () -> Unit) {
                 Text(
                     "IA extrae fecha · monto · concepto · establecimiento",
                     color = Color.White.copy(alpha = 0.45f),
-                    fontSize = 11.sp,
-                    modifier = Modifier.align(Alignment.BottomCenter).padding(bottom = 32.dp),
+                    fontSize = 11.sp, fontFamily = Poppins,
+                    modifier = Modifier
+                        .align(Alignment.BottomCenter)
+                        .fillMaxWidth()
+                        .padding(horizontal = 24.dp, vertical = 32.dp),
                     textAlign = TextAlign.Center
                 )
             }
 
             // Shutter
             Column(
-                modifier = Modifier.padding(horizontal = 32.dp, vertical = 32.dp),
+                modifier = Modifier.fillMaxWidth().padding(horizontal = 32.dp, vertical = 32.dp),
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.spacedBy(16.dp)
             ) {
